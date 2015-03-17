@@ -6,17 +6,16 @@
         <thead>
             <tr>
                 <td>Queue</td>
-                <td>Option</td>
             </tr>
         </thead>
         <tbody>
             @for(option <- options) {
                 <tr>
-                    <td>Test</td>
-                    <td>Test</td>
+                    <td>
+                        @option.choice
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
-
 }
