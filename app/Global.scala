@@ -16,11 +16,14 @@ object Global extends GlobalSettings {
       DB.withTransaction { implicit session: Session =>
         if (LunchOptions.count == 0) {
           Seq(
-            LunchOption(1, "test1", 20),
-            LunchOption(2, "test2", 50),
-            LunchOption(3, "test3", 20)
+            Provider(1, "Chinese"),
+            Provider(2, "Boots")
+          ).foreach(Providers.create)
+          Seq(
+            LunchOption(1, "test1", 1),
+            LunchOption(2, "test2", 2),
+            LunchOption(3, "test3", 1)
           ).foreach(LunchOptions.create)
-
         }
       }
     }

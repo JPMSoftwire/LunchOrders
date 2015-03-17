@@ -12,11 +12,15 @@ object LunchOption {
 }
 
 class LunchOptions(tag: Tag) extends Table[LunchOption](tag, "LunchOption") {
+  val providers = TableQuery[Providers]
+
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
   def choice = column[String]("choice")
-  def providerId = column[Long]("lunchProviderId")
+  def providerId = column[Long]("providerId")
 
-  def * =(id, choice, providerId) <> ((LunchOption.apply _).tupled, LunchOption.unapply)
+  def * = (id, choice, providerId) <>((LunchOption.apply _).tupled, LunchOption.unapply)
+
+  def provider = foreignKey("providerForeignKey", providerId, providers)(_.id)
 }
 
 object LunchOptions {
