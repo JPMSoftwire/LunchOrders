@@ -1,7 +1,22 @@
-@(message: String)
+@(options: List[LunchOption])
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>Queue</td>
+                <td>Option</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(option <- options) {
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 }
