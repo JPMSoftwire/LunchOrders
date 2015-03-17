@@ -20,7 +20,6 @@ class LunchOptions(tag: Tag) extends Table[LunchOption](tag, "LunchOption") {
 }
 
 object LunchOptions {
-
   val lunchOptions = TableQuery[LunchOptions]
 
   def all()(implicit s: Session) = {
@@ -33,5 +32,13 @@ object LunchOptions {
 
   def create(lunchOption: LunchOption)(implicit s: Session) = {
     (lunchOptions returning lunchOptions.map(_.id)) += lunchOption
+  }
+
+  def find(id: Long)(implicit s: Session) = {
+    lunchOptions.filter(_.id === id).first
+  }
+
+  def byProvider(providerId: Long)(implicit s: Session) = {
+    lunchOptions.filter(_.providerId === providerId).list
   }
 }
