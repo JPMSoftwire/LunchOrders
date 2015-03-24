@@ -8,6 +8,7 @@ Download & install [Intellij IDEA](https://www.jetbrains.com/idea/) (Community e
 Install Scala plugin
 
 ```
+$ npm install -g gulp
 $ npm install
 ```
 
