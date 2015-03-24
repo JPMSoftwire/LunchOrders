@@ -24,6 +24,12 @@ object Global extends GlobalSettings {
             LunchOption(2, "test2", 2),
             LunchOption(3, "test3", 1)
           ).foreach(LunchOptions.create)
+          Seq(
+            User(1,"TEST")
+          ).foreach(Users.create)
+          Seq(
+            Order(1, 1, 1, new Date(0))
+          ).foreach(Orders.create)
         }
       }
     }

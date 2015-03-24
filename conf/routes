@@ -13,3 +13,8 @@ GET         /api/lunchoptions                  controllers.LunchOptionsControlle
 POST        /api/lunchoptions                  controllers.LunchOptionsController.create
 GET         /api/lunchoptions/:provider        controllers.LunchOptionsController.lunchOptionByProvider(provider: Long)
 
+GET         /api/users                         controllers.UsersController.all
+POST        /api/users                         controllers.UsersController.create
+
+GET         /api/orders                        controllers.OrdersController.all
+POST        /api/orders                        controllers.OrdersController.create
