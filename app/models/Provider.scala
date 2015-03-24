@@ -5,7 +5,7 @@ import play.api.libs.json.Json
 
 import scala.slick.lifted.Tag
 
-case class Provider(id: Long, choice: String)
+case class Provider(id: Long, name: String)
 
 object Provider {
   implicit val lunchOptionFormat = Json.format[Provider]
