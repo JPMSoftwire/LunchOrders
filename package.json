@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An app for creating and organising lunch orders at work",
   "devDependencies": {
+    "bootflat": "^2.0.4",
     "bootstrap": "^3.3.4",
     "browserify": "^9.0.3",
     "browserify-css": "^0.4.0",
