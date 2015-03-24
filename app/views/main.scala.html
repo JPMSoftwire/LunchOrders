@@ -1,4 +1,4 @@
-@(currentPage: String)(content: Html)
+@(currentPage: Option[String])(content: Html)
 
 <!DOCTYPE html>
 
@@ -22,7 +22,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="@if(currentPage == "index") {active}" >
+                        <li class="@if(currentPage.get == "index") {active}" >
                             <a href="@routes.Application.index()">Home</a>
                         </li>
                     </ul>
