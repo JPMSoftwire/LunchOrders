@@ -1,6 +1,7 @@
 var $ = require("jquery");
-require("bootflat/bootflat/css/bootflat.css");
+window.jQuery = $;
+require("bootstrap/dist/css/bootstrap.css");
 require("../stylesheets/main.css");
 var bootstrap = require("bootstrap/dist/js/bootstrap.js");
 
-console.log("Something");
+console.log("Starting it");
