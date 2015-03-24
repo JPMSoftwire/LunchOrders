@@ -1,18 +1,18 @@
-@(options: List[LunchOption])
+@(providers: List[Provider])
 
-@main("Welcome to Play") {
+@main {
 
     <table class="table table-bordered">
         <thead>
             <tr>
-                <td>Queue</td>
+                <td>Providers</td>
             </tr>
         </thead>
         <tbody>
-            @for(option <- options) {
+            @for(provider <- providers) {
                 <tr>
                     <td>
-                        @option.choice
+                        <a href="@routes.Application.addOrder(provider.id)">@provider.name</a>
                     </td>
                 </tr>
             }
